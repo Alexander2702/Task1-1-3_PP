@@ -8,7 +8,6 @@ import java.util.Objects;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-//    public static Connection connection;
     static Driver driver;
     private static final String URL = "jdbc:mysql://localhost:3306/mydbusers";
     private static final String USERNAME = "root";
@@ -22,7 +21,7 @@ public class Util {
                 return DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
             } catch (SQLException e) {
-                System.out.println("ошибка при подключении к БД");;
+                System.out.println("ошибка при подключении к БД");
             }
             return null;
     }
