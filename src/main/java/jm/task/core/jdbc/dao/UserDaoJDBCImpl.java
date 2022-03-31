@@ -49,7 +49,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void removeUserById(long id) {
-        String removeById = "DELETE FROM users WHERE id";
+        String removeById = "DELETE FROM users WHERE id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(removeById)) {
             preparedStatement.executeUpdate();
             System.out.println("пользователь под " + id + " номером удален.");
